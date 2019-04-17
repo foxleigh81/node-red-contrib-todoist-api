@@ -1,0 +1,28 @@
+{
+    "name": "node-red-contrib-todoist",
+    "node-red": {
+        "nodes": {
+            "todoist-task-create": "todoist-task-create.js"
+        }
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/1ft-seabass/node-red-contrib-todoist#readme",
+    "author": {
+        "name": "Seigo Tanaka",
+        "email": "seigo@1ft-seabass.jp",
+        "url": "http://1ft-seabass.jp/"
+    },
+    "keywords": [
+        "node-red",
+        "Todoist"
+    ],
+    "dependencies": {
+        "request": "^2.88.0"
+    },
+    "version": "0.0.3",
+    "description": "Todoist Node creates task items using Todoist REST API.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/1ft-seabass/node-red-contrib-todoist.git"
+    }
+}
