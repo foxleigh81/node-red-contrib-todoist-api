@@ -18,7 +18,7 @@ module.exports = function(RED) {
             }
 
             var options = {
-                uri: 'https://beta.todoist.com/API/v8/tasks',
+                uri: 'https://api.todoist.com/rest/v1/tasks',
                 headers: headers,
                 json: _data
             }
