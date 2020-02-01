@@ -19,7 +19,7 @@
     "dependencies": {
         "request": "^2.88.0"
     },
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Todoist Node creates task items using Todoist REST API.",
     "repository": {
         "type": "git",
