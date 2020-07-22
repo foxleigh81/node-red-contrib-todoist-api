@@ -2,10 +2,13 @@ var request = require('request');
 
 module.exports = function(RED) {
     function TodoistTaskCreate(config) {
-        
+
         RED.nodes.createNode(this,config);
         var node = this;
         node.on('input', function(msg) {
+
+            node.status({fill:"red",shape:"dot",text:"Creating Task"});
+
             var _data = msg.payload;
             var _currentDate = new Date();
             var _token = this.credentials.todoisttoken;
@@ -27,9 +30,10 @@ module.exports = function(RED) {
                 msg.payload = body;
                 msg.response = response;
                 node.send(msg);
+                node.status({});
             })
 
-            
+
         });
     }
     RED.nodes.registerType("todoist-task-create",TodoistTaskCreate,{
