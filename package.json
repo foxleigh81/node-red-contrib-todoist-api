@@ -1,17 +1,33 @@
 {
-    "name": "node-red-contrib-todoist",
+    "name": "node-red-contrib-todoist-api",
+    "version": "0.0.1",
+    "description": "Todoist API interaction nodes for Node-RED", 
     "node-red": {
         "nodes": {
-            "todoist-task-create": "todoist-task-create.js"
+            "todoist-task-create": "todoist-task-create.js",
+            "todoist-task-delete": "todoist-task-delete.js",
+            "todoist-task-update": "todoist-task-update.js",
+            "todoist-task-get": "todoist-task-get.js",
+            "todoist-task-list": "todoist-task-list.js",
+            "todoist-task-complete": "todoist-task-complete.js",
+            "todoist-task-uncomplete": "todoist-task-uncomplete.js",
+            "todoist-api-query": "todoist-api-query.js"
         }
     },
     "license": "MIT",
     "homepage": "https://github.com/1ft-seabass/node-red-contrib-todoist#readme",
-    "author": {
-        "name": "Seigo Tanaka",
-        "email": "seigo@1ft-seabass.jp",
-        "url": "http://1ft-seabass.jp/"
+    "authors": {
+        "name": "Alex Foxleigh",
+        "email": "alex@alexfoxleigh.com",
+        "url": "https://alexfoxleigh.com/"
     },
+    "contributors": [
+        {
+            "name": "Seigo Tanaka",
+            "email": "seigo@1ft-seabass.jp",
+            "url": "http://1ft-seabass.jp/"
+        }
+    ],
     "keywords": [
         "node-red",
         "Todoist"
@@ -19,10 +35,8 @@
     "dependencies": {
         "request": "^2.88.0"
     },
-    "version": "0.0.7",
-    "description": "Todoist Node creates task items using Todoist REST API.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/1ft-seabass/node-red-contrib-todoist.git"
+        "url": "https://github.com/foxleigh81/node-red-contrib-todoist-api.git"
     }
 }

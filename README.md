@@ -1,22 +1,18 @@
-# node-red-contrib-todoist
+# node-red-contrib-todoist-api
 
-The Node node-red-contrib-todoist creates task items using Todoist REST API.
-
-This is simple node for Todoist.
+This is a node-red palette that allows you to interact with your [Todoist](https://todoist.com) account via the [Todoist REST API](https://developer.todoist.com/rest/v1/#overview)
 
 ## Install
 
 Move your Node-RED user directory ~/.node-red
 
-```
+```bash
 npm i --unsafe-perm node-red-contrib-todoist
 ```
-
 ## Usage
-
 ### Requires Todoist token
 
-Using this node reqires Todoist personal API token or OAuth API token.
+Using this node reqiures Todoist personal API token or OAuth API token.
 
 About [Todoist personal API token or OAuth API token.](https://developer.todoist.com/rest/v8/#authorization)
 
@@ -35,6 +31,22 @@ This inject node data is same data as Todoist REST API create task item. [https:
 This flow create a new Todoist task item when this inject node is clicked.
 
 ![image.png (92.8 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/04/17/8131/c87050cc-ef6e-40da-87e8-5ccab9db8d95.png)
+
+## Nodes available
+
+I created several nodes for common tasks such as:
+    - Create an individual task
+    - Delete an individual task
+    - Update an individual task (this actually deletes the task and creates a new one with the new data so fair warning there)
+    - Get an individual task
+    - Complete/uncomplete an individual task
+    - List all tasks in a project
+
+I also created a generic 'query' node that can be used to query any Todoist endpoint.
+
+## Acknowledgements
+
+This repo is a fork of <https://github.com/foxleigh81/node-red-contrib-todoist-api> by [Seigo Tanaka](http://1ft-seabass.jp/). Credit goes to them for providing the original code and the basis for this readme.
 
 ## License
 
