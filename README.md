@@ -1,5 +1,7 @@
 # node-red-contrib-todoist-api
 
+⚠️ THIS NODE RED NODE IS STILL IN DEVELOPMENT AND IS NOT READY FOR USE ⚠️
+
 This is a node-red palette that allows you to interact with your [Todoist](https://todoist.com) account via the [Todoist REST API](https://developer.todoist.com/rest/v1/#overview)
 
 ## Install
