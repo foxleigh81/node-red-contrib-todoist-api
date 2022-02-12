@@ -37,12 +37,13 @@ This flow create a new Todoist task item when this inject node is clicked.
 ## Nodes available
 
 I created several nodes for common tasks such as:
-    - Create an individual task
-    - Delete an individual task
-    - Update an individual task (this actually deletes the task and creates a new one with the new data so fair warning there)
-    - Get an individual task
-    - Complete/uncomplete an individual task
-    - List all tasks in a project
+
+- Create an individual task
+- Delete an individual task
+- Update an individual task (this actually deletes the task and creates a new one with the new data so fair warning there)
+- Get an individual task
+- Complete/uncomplete an individual task
+- List all tasks in a project
 
 I also created a generic 'query' node that can be used to query any Todoist endpoint.
 
