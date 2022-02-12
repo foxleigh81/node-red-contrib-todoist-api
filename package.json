@@ -1,21 +1,15 @@
 {
-    "name": "node-red-contrib-todoist-api",
+    "name": "@foxleigh81/node-red-contrib-todoist-api",
     "version": "0.0.1",
-    "description": "Todoist API interaction nodes for Node-RED", 
+    "description": "Todoist API interaction nodes for Node-RED",
     "node-red": {
         "nodes": {
-            "todoist-task-create": "todoist-task-create.js",
-            "todoist-task-delete": "todoist-task-delete.js",
-            "todoist-task-update": "todoist-task-update.js",
-            "todoist-task-get": "todoist-task-get.js",
-            "todoist-task-list": "todoist-task-list.js",
-            "todoist-task-complete": "todoist-task-complete.js",
-            "todoist-task-uncomplete": "todoist-task-uncomplete.js",
-            "todoist-api-query": "todoist-api-query.js"
+            "add-token": "./nodes/config/index.js",
+            "todoist-task-create": "./nodes/create-task/index.js"
         }
     },
     "license": "MIT",
-    "homepage": "https://github.com/1ft-seabass/node-red-contrib-todoist#readme",
+    "homepage": "https://github.com/foxleigh81/node-red-contrib-todoist-api#readme",
     "authors": {
         "name": "Alex Foxleigh",
         "email": "alex@alexfoxleigh.com",
@@ -29,14 +23,13 @@
         }
     ],
     "keywords": [
-        "node-red",
         "Todoist"
     ],
-    "dependencies": {
-        "request": "^2.88.0"
-    },
     "repository": {
         "type": "git",
         "url": "https://github.com/foxleigh81/node-red-contrib-todoist-api.git"
+    },
+    "dependencies": {
+        "axios": "^0.25.0"
     }
 }
