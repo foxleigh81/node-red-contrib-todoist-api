@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('todoist-task-create',{
+    RED.nodes.registerType('todoist-task-delete',{
         category: 'Todoist',
         icon: "icons/todoist.png",
         color: '#E9967A', // Todoist base color #E44332
@@ -12,13 +12,13 @@
         inputs:1,
         outputs:1,
         label: function () {
-            return this.name ||  "Create Task";
+            return this.name ||  "Delete Task";
         },
-        paletteLabel: 'Create Task',
+        paletteLabel: 'Delete Task',
     });
 </script>
 
-<script type="text/html" data-template-name="todoist-task-create">
+<script type="text/html" data-template-name="todoist-task-delete">
     <div class="form-row">
         <label for="node-input-token"
           ><i class="fa fa-key" ></i> Select Token</label
@@ -31,8 +31,8 @@
     </div>
 </script>
 
-<script type="text/markdown" data-help-name="todoist-task-create">
-    ## Create task
+<script type="text/markdown" data-help-name="todoist-task-delete">
+    ## Delete task
 
-    This node creates a task in your Todoist account.
+    This node deletes a task in your Todoist account.
 </script>

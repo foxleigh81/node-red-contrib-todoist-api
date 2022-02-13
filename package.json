@@ -5,7 +5,8 @@
     "node-red": {
         "nodes": {
             "add-token": "./nodes/config/index.js",
-            "todoist-task-create": "./nodes/create-task/index.js"
+            "todoist-task-create": "./nodes/create-task/index.js",
+            "todoist-task-delete": "./nodes/delete-task/index.js"
         }
     },
     "license": "MIT",
