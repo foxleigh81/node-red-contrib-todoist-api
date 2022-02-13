@@ -1,6 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('todoist-task-create',{
-        category: 'function',
+        category: 'Todoist',
+        icon: "font-awesome/fa-todoist",
         color: '#E9967A', // Todoist base color #E44332
         defaults: {
             name: {value:""},
@@ -11,8 +12,9 @@
         inputs:1,
         outputs:1,
         label: function () {
-            return this.name ||  "todoist-task-create";
+            return this.name ||  "Create Task";
         },
+        paletteLabel: 'Create Task',
     });
 </script>
 

@@ -4,11 +4,12 @@ module.exports = function(RED) {
         RED.nodes.createNode(this,config);
 
         var node = this;
-        var token = config.token;
+
+        var token = RED.nodes.getNode(config.token).credentials.token;
 
         node.on('input', function(msg) {
 
-            node.status({fill:"red",shape:"dot",text:"Creating Task"});
+            // node.status({fill:"red",shape:"dot",text:"Creating Task"});
 
             var data = msg.payload;
                       
@@ -18,15 +19,21 @@ module.exports = function(RED) {
                 method: 'POST',
                 data
             };
-            
-            Promise.resolve(todoistQuery(options))
+
+            todoistQuery(options)
                 .then(function(response) {
                     msg.payload = response;
                     msg.response = response;
                     node.send(msg);
-                    node.status({});
+                    node.status({fill:"green",shape:"dot",text:"Success"});
+                })
+                .catch(error => {
+                    msg.payload = error;
+                    msg.response = error;
+                    node.send(msg);
+                    node.status({fill:"red",shape:"dot",text:"API Error"});
                 })
         });
     }
-    RED.nodes.registerType("Todoist API - Create Task", TodoistTaskCreate);
+    RED.nodes.registerType("todoist-task-create", TodoistTaskCreate);
 }
