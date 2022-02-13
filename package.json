@@ -22,15 +22,9 @@
         "email": "alex@alexfoxleigh.com",
         "url": "https://alexfoxleigh.com/"
     },
-    "contributors": [
-        {
-            "name": "Seigo Tanaka",
-            "email": "seigo@1ft-seabass.jp",
-            "url": "http://1ft-seabass.jp/"
-        }
-    ],
     "keywords": [
-        "Todoist"
+        "Todoist",
+        "node-red"
     ],
     "repository": {
         "type": "git",
