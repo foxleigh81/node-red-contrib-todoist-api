@@ -1,39 +1,105 @@
 # node-red-contrib-todoist-api
 
-⚠️ THIS NODE RED NODE IS STILL IN DEVELOPMENT AND IS NOT READY FOR USE ⚠️
-
 This is a node-red palette that allows you to interact with your [Todoist](https://todoist.com) account via the [Todoist REST API](https://developer.todoist.com/rest/v1/#overview)
 
 ## Install
 
-Move your Node-RED user directory ~/.node-red
+You can install via the node-red palette manager or via npm:
 
 ```bash
-npm i --unsafe-perm node-red-contrib-todoist
+npm i --unsafe-perm node-red-contrib-todoist-api
 ```
 ## Usage
-### Requires Todoist token
+### Configuration
 
-Using this node reqiures Todoist personal API token or OAuth API token.
+To start using these nodes you will need to create a new configuration node, to do this, drag a node from the palette into the flow editor and double click it and add your Todoist API token to the 'select token' dropdown.
 
-About [Todoist personal API token or OAuth API token.](https://developer.todoist.com/rest/v8/#authorization)
+To get your todoist personal API token, follow the following list: https://todoist.com/app/settings/integrations
 
-### Todoist task item create node
+### Adding data
 
-Sample flow:
+Each node interacts with the Todoist API and returns data in the form of a node-red flow. In order for it to work, you will need to pass the data to the the node via a payload. See the example below for a basic node that creates a new task in your Todoist project.
+
+### Example flow
 
 ```js
-[{"id":"f1ff6ea6.2d084","type":"inject","z":"d3d7f120.bc949","name":"","topic":"","payload":"{\"content\":\"Appointment with Maria\",\"due_string\":\"tomorrow at 12:00\",\"due_lang\":\"en\",\"priority\":4}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":410,"y":560,"wires":[["2cc6e790.eede18"]]},{"id":"70d61dc1.444ba4","type":"debug","z":"d3d7f120.bc949","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":770,"y":560,"wires":[]},{"id":"2cc6e790.eede18","type":"todoist-task-create","z":"d3d7f120.bc949","name":"","x":590,"y":560,"wires":[["70d61dc1.444ba4"]]}]
+[
+    {
+        "id": "b28f2d309e78ecbe",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98f370107919b2bd",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Create' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}",
+        "payloadType": "json",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "88532fdecad16910"
+            ]
+        ]
+    },
+    {
+        "id": "ec9df2135175608a",
+        "type": "debug",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "88532fdecad16910",
+        "type": "todoist-task-create",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "59a4505979e26f0f",
+        "type": "add-token",
+        "name": "Todoist"
+    }
+]
 ```
 
-This inject node data is same data as Todoist REST API create task item. [https://developer.todoist.com/rest/v8/#create-a-new-task](https://developer.todoist.com/rest/v8/#create-a-new-task).
-
-![image.png (7.5 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/04/17/8131/e1a772cd-e40c-4022-9fc6-50c8a1e8359c.png)
-
-This flow create a new Todoist task item when this inject node is clicked.
-
-![image.png (92.8 kB)](https://img.esa.io/uploads/production/attachments/3062/2019/04/17/8131/c87050cc-ef6e-40da-87e8-5ccab9db8d95.png)
-
+The payload data in the inject node is same data as the Todoist REST API create task item. [https://developer.todoist.com/rest/v8/#create-a-new-task](https://developer.todoist.com/rest/v8/#create-a-new-task).
 ## Nodes available
 
 I created several nodes for common tasks such as:
@@ -46,11 +112,6 @@ I created several nodes for common tasks such as:
 - Delete an individual task
 
 I also created a generic 'query' node that can be used to query any Todoist endpoint.
-
-## Acknowledgements
-
-This repo is a fork of <https://github.com/foxleigh81/node-red-contrib-todoist-api> by [Seigo Tanaka](http://1ft-seabass.jp/). Credit goes to them for providing the original code and the basis for this readme.
-
 ## License
 
 MIT License
