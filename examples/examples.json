@@ -1,0 +1,395 @@
+[
+    {
+        "id": "b28f2d309e78ecbe",
+        "type": "tab",
+        "label": "Todoist API Example Flows",
+        "disabled": false,
+        "info": "A set of example flows for the Todoist API",
+        "env": []
+    },
+    {
+        "id": "98f370107919b2bd",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Create' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}",
+        "payloadType": "json",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "88532fdecad16910"
+            ]
+        ]
+    },
+    {
+        "id": "ec9df2135175608a",
+        "type": "debug",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "88532fdecad16910",
+        "type": "todoist-task-create",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 610,
+        "y": 440,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "88371c4acbac679f",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Delete' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\": 2995104339}",
+        "payloadType": "json",
+        "x": 430,
+        "y": 800,
+        "wires": [
+            [
+                "18fca417b29da93b"
+            ]
+        ]
+    },
+    {
+        "id": "18fca417b29da93b",
+        "type": "todoist-task-delete",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 610,
+        "y": 800,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "179987fce6594507",
+        "type": "todoist-task-get",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "62c6f660215283ab",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Get' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\": 2995104339}",
+        "payloadType": "json",
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "179987fce6594507"
+            ]
+        ]
+    },
+    {
+        "id": "71462eb83a4f8e46",
+        "type": "todoist-task-get-all",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 610,
+        "y": 700,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "b6605d0f44b22b7b",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "Get all tasks on account",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "71462eb83a4f8e46"
+            ]
+        ]
+    },
+    {
+        "id": "d1bd0de8f8635531",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Get all tasks by project' Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"project_id\": 2203306141}",
+        "payloadType": "json",
+        "x": 380,
+        "y": 720,
+        "wires": [
+            [
+                "71462eb83a4f8e46"
+            ]
+        ]
+    },
+    {
+        "id": "d37bd82730b9849a",
+        "type": "todoist-task-update",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 620,
+        "y": 520,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "80ead0394ce29843",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Update' Task Data",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 335,
+        "y": 540,
+        "wires": [
+            [
+                "d37bd82730b9849a"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "92981bc2dff2dc5c",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Complete' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\": 2995104339}",
+        "payloadType": "json",
+        "x": 400,
+        "y": 860,
+        "wires": [
+            [
+                "2130e4d8c35074c1"
+            ]
+        ]
+    },
+    {
+        "id": "6bdd764db9bbb4ea",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Reopen' Task Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\": 2995104339}",
+        "payloadType": "json",
+        "x": 410,
+        "y": 920,
+        "wires": [
+            [
+                "0c6b9c56f9994249"
+            ]
+        ]
+    },
+    {
+        "id": "2130e4d8c35074c1",
+        "type": "todoist-task-complete",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 620,
+        "y": 860,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "0c6b9c56f9994249",
+        "type": "todoist-task-reopen",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 620,
+        "y": 920,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "9ba1b7f3a5ffbe0f",
+        "type": "todoist-query-api",
+        "z": "b28f2d309e78ecbe",
+        "name": "",
+        "token": "59a4505979e26f0f",
+        "x": 600,
+        "y": 1000,
+        "wires": [
+            [
+                "ec9df2135175608a"
+            ]
+        ]
+    },
+    {
+        "id": "217176cbe8a3a28f",
+        "type": "inject",
+        "z": "b28f2d309e78ecbe",
+        "name": "'Query API' Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"endpoint\":\"tasks\",\"method\":\"post\",\"data\":{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}}",
+        "payloadType": "json",
+        "x": 420,
+        "y": 1000,
+        "wires": [
+            [
+                "9ba1b7f3a5ffbe0f"
+            ]
+        ]
+    },
+    {
+        "id": "59a4505979e26f0f",
+        "type": "add-token",
+        "name": "Todoist"
+    }
+]
