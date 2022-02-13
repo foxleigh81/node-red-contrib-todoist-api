@@ -8,18 +8,13 @@ module.exports = function(RED) {
         var token = RED.nodes.getNode(config.token).credentials.token;
 
         node.on('input', function(msg) {
-
-            // node.status({fill:"red",shape:"dot",text:"Creating Task"});
-
             var data = msg.payload;
-                      
             var options = {
                 token,
                 endpoint: 'tasks',
                 method: 'POST',
                 data
             };
-
             todoistQuery(options)
                 .then(function(response) {
                     msg.payload = response;
