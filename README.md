@@ -22,81 +22,8 @@ Each node interacts with the Todoist API and returns data in the form of a node-
 
 ### Example flow
 
-```js
-[
-    {
-        "id": "b28f2d309e78ecbe",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "98f370107919b2bd",
-        "type": "inject",
-        "z": "b28f2d309e78ecbe",
-        "name": "'Create' Task Data",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}",
-        "payloadType": "json",
-        "x": 410,
-        "y": 440,
-        "wires": [
-            [
-                "88532fdecad16910"
-            ]
-        ]
-    },
-    {
-        "id": "ec9df2135175608a",
-        "type": "debug",
-        "z": "b28f2d309e78ecbe",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 790,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "88532fdecad16910",
-        "type": "todoist-task-create",
-        "z": "b28f2d309e78ecbe",
-        "name": "",
-        "token": "59a4505979e26f0f",
-        "x": 610,
-        "y": 440,
-        "wires": [
-            [
-                "ec9df2135175608a"
-            ]
-        ]
-    },
-    {
-        "id": "59a4505979e26f0f",
-        "type": "add-token",
-        "name": "Todoist"
-    }
-]
+```json
+[{"id":"cd167cf2edaf6512","type":"inject","z":"a42573365dced8a7","name":"'Create' Task Data","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"content\":\"Test Task\",\"project_id\":2184202398,\"priority\":1}","payloadType":"json","x":410,"y":440,"wires":[["57872b84db271bd5"]]},{"id":"57872b84db271bd5","type":"todoist-task-create","z":"a42573365dced8a7","name":"","token":"59a4505979e26f0f","x":610,"y":440,"wires":[["a33919ea4e211f6f"]]},{"id":"a33919ea4e211f6f","type":"debug","z":"a42573365dced8a7","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":970,"y":680,"wires":[]},{"id":"59a4505979e26f0f","type":"add-token","name":"Todoist"}]
 ```
 
 The payload data in the inject node is same data as the Todoist REST API create task item. [https://developer.todoist.com/rest/v8/#create-a-new-task](https://developer.todoist.com/rest/v8/#create-a-new-task).
