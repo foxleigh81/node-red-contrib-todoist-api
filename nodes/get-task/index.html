@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('todoist-task-delete',{
+    RED.nodes.registerType('todoist-task-get',{
         category: 'Todoist',
         icon: "icons/todoist.png",
         color: '#E9967A', // Todoist base color #E44332
@@ -12,13 +12,13 @@
         inputs:1,
         outputs:1,
         label: function () {
-            return this.name ||  "Delete a task";
+            return this.name ||  "Get a task";
         },
-        paletteLabel: 'Delete a task',
+        paletteLabel: 'Get a task',
     });
 </script>
 
-<script type="text/html" data-template-name="todoist-task-delete">
+<script type="text/html" data-template-name="todoist-task-get">
     <div class="form-row">
         <label for="node-input-token"
           ><i class="fa fa-key" ></i> Select Token</label
@@ -31,8 +31,8 @@
     </div>
 </script>
 
-<script type="text/markdown" data-help-name="todoist-task-delete">
-    ## Delete task
+<script type="text/markdown" data-help-name="todoist-task-get">
+    ## get task
 
-    This node deletes a task in your Todoist account.
+    This node gets a task in your Todoist account.
 </script>
