@@ -1,5 +1,7 @@
 # node-red-contrib-todoist-api
 
+![npm](https://img.shields.io/npm/dm/@foxleigh81/node-red-contrib-todoist-api)
+
 This is a node-red palette that allows you to interact with your [Todoist](https://todoist.com) account via the [Todoist REST API](https://developer.todoist.com/rest/v1/#overview)
 
 ## Install
@@ -42,3 +44,9 @@ I also created a generic 'query' node that can be used to query any Todoist endp
 ## License
 
 MIT License
+
+## Support me
+
+I made this with love and of course it is free for you to use and modify however you see fit, however if you would like to buy me a coffee to say thanks, I certainly won't complain :)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I21FRCN)
