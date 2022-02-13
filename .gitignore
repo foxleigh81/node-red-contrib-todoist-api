@@ -64,3 +64,6 @@ typings/
 package-lock.json
 
 .idea
+
+# OS files
+*.DS_Store
