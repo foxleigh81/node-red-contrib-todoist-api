@@ -6,6 +6,7 @@
         "nodes": {
             "add-token": "./nodes/config/index.js",
             "todoist-task-get": "./nodes/get-task/index.js",
+            "todoist-task-get-all": "./nodes/get-all-tasks/index.js",
             "todoist-task-create": "./nodes/create-task/index.js",
             "todoist-task-delete": "./nodes/delete-task/index.js"
         }
