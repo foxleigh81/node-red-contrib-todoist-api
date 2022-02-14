@@ -41,6 +41,11 @@ I created several nodes for common tasks such as:
 - Delete an individual task
 
 I also created a generic 'query' node that can be used to query any Todoist endpoint.
+
+Here is a visual representation of the nodes available:
+
+![all available nodes](https://raw.githubusercontent.com/foxleigh81/node-red-contrib-todoist-api/master/all-nodes.png)
+
 ## License
 
 MIT License
