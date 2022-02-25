@@ -1,8 +1,8 @@
 <script type="text/javascript">
-    RED.nodes.registerType('todoist-task-get',{
+    RED.nodes.registerType('todoist-task-update',{
         category: 'Todoist',
         icon: "icons/todoist.png",
-        color: '#E9967A', // Todoist base color #E44332
+        color: '#db4c3f',
         defaults: {
             name: {value:""},
             token: {
@@ -12,13 +12,13 @@
         inputs:1,
         outputs:1,
         label: function () {
-            return this.name ||  "Get a task";
+            return this.name ||  "Update a task";
         },
-        paletteLabel: 'Get a task',
+        paletteLabel: 'Update a task',
     });
 </script>
 
-<script type="text/html" data-template-name="todoist-task-get">
+<script type="text/html" data-template-name="todoist-task-update">
     <div class="form-row">
         <label for="node-input-token"
           ><i class="fa fa-key" ></i> Select Token</label
@@ -31,16 +31,20 @@
     </div>
 </script>
 
-<script type="text/markdown" data-help-name="todoist-task-get">
-    ## get task
+<script type="text/markdown" data-help-name="todoist-task-update">
+    ## Update task
 
-    This node gets a task in your Todoist account. It expects a payload with a task ID.
+    This node updates a task in your Todoist account. It expects a payload with the task id and the updated data:
 
     e.g.
 
-    ```
+    ```json
     {
-        "id": "123456789"
+        "id": 2995104339,
+        "content": "Test Task (updated)",
+        "project_id": 2203306141,
+        "priority": 1,
+        "assignee": 2671142
     }
     ```
 </script>

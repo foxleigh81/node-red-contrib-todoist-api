@@ -1,8 +1,8 @@
 <script type="text/javascript">
-    RED.nodes.registerType('todoist-task-reopen',{
+    RED.nodes.registerType('todoist-task-get',{
         category: 'Todoist',
         icon: "icons/todoist.png",
-        color: '#E9967A', // Todoist base color #E44332
+        color: '#db4c3f', 
         defaults: {
             name: {value:""},
             token: {
@@ -12,13 +12,13 @@
         inputs:1,
         outputs:1,
         label: function () {
-            return this.name ||  "Reopen a task";
+            return this.name ||  "Get a task";
         },
-        paletteLabel: 'Reopen a task',
+        paletteLabel: 'Get a task',
     });
 </script>
 
-<script type="text/html" data-template-name="todoist-task-reopen">
+<script type="text/html" data-template-name="todoist-task-get">
     <div class="form-row">
         <label for="node-input-token"
           ><i class="fa fa-key" ></i> Select Token</label
@@ -31,10 +31,10 @@
     </div>
 </script>
 
-<script type="text/markdown" data-help-name="todoist-task-reopen">
-    ## Re-open a task
+<script type="text/markdown" data-help-name="todoist-task-get">
+    ## get task
 
-    This node allows you to Re-open (mark incomplete) a task in your Todoist account. It expects a payload with a task ID.
+    This node gets a task in your Todoist account. It expects a payload with a task ID.
 
     e.g.
 
@@ -42,4 +42,5 @@
     {
         "id": "123456789"
     }
+    ```
 </script>
