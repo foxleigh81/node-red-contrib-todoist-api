@@ -6,7 +6,7 @@
         defaults: {
             name: {value:""},
             token: {
-                type:"add-token"
+                type:"add-todoist-api-token"
             },
         },
         inputs:1,
@@ -32,16 +32,16 @@
 </script>
 
 <script type="text/markdown" data-help-name="todoist-task-create">
-    ## Create task
+This node creates a task in your Todoist account. 
 
-    This node creates a task in your Todoist account. It expects a payload of data in the form of a JSON object with data that matches the format in the [Todoist REST API documentation](https://developer.todoist.com/rest/v1/#tasks).:
+It expects a payload of data in the form of a JSON object with data that matches the format in the [Todoist REST API documentation](https://developer.todoist.com/rest/v1/#tasks).:
 
-    e.g. 
-    ```json
-    {
-        "content": "Test Task",
-        "project_id": 2203306141,
-        "priority": 1
-    }
-    ```
+e.g. 
+```json
+{
+  "content": "Test Task",
+  "project_id": 2203306141,
+  "priority": 1
+}
+```
 </script>

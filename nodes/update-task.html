@@ -6,7 +6,7 @@
         defaults: {
             name: {value:""},
             token: {
-                type:"add-token"
+                type:"add-todoist-api-token"
             },
         },
         inputs:1,
@@ -32,19 +32,17 @@
 </script>
 
 <script type="text/markdown" data-help-name="todoist-task-update">
-    ## Update task
+This node updates a task in your Todoist account. It expects a payload with the task id and the updated data:
 
-    This node updates a task in your Todoist account. It expects a payload with the task id and the updated data:
+e.g.
 
-    e.g.
-
-    ```json
-    {
-        "id": 2995104339,
-        "content": "Test Task (updated)",
-        "project_id": 2203306141,
-        "priority": 1,
-        "assignee": 2671142
-    }
-    ```
+```json
+{
+  "id": 2995104339,
+  "content": "Test Task 2",
+  "project_id": 2203306141,
+  "priority": 1,
+  "assignee": 2671142
+}
+```
 </script>

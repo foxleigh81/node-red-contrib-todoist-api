@@ -6,7 +6,7 @@
         defaults: {
             name: {value:""},
             token: {
-                type:"add-token"
+                type:"add-todoist-api-token"
             },
         },
         inputs:1,
@@ -32,15 +32,13 @@
 </script>
 
 <script type="text/markdown" data-help-name="todoist-task-get-all">
-    ## get task
+This node gets all tasks in your Todoist account, no payload is required to get all tasks on account, but if you want to get all tasks of a specific project, you must pass `projectId` as a payload.
 
-    This node gets all tasks in your Todoist account, no payload is required to get all tasks on account, but if you want to get all tasks of a specific project, you must pass `projectId` as a payload.
+e.g.
 
-    e.g.
-
-    ```json
-    {
-        "projectId": "123456789"
-    }
-    ```
+```json
+{
+  "projectId": "123456789"
+}
+```
 </script>

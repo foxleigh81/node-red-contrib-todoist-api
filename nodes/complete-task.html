@@ -6,7 +6,7 @@
         defaults: {
             name: {value:""},
             token: {
-                type:"add-token"
+                type:"add-todoist-api-token"
             },
         },
         inputs:1,
@@ -32,14 +32,12 @@
 </script>
 
 <script type="text/markdown" data-help-name="todoist-task-complete">
-    ## Complete a task
+This node allows you to complete (mark complete) a task in your Todoist account. It expects a payload with a task ID.
 
-    This node allows you to complete (mark incomplete) a task in your Todoist account. It expects a payload with a task ID.
+e.g.
 
-    e.g.
-
-    ```
-    {
-        "id": "123456789"
-    }
+```
+{
+  "id": "123456789"
+}
 </script>

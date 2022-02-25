@@ -4,7 +4,7 @@
     "description": "Todoist API interaction nodes for Node-RED",
     "node-red": {
         "nodes": {
-            "add-token": "./nodes/config.js",
+            "add-todoist-api-token": "./nodes/config.js",
             "todoist-task-get": "./nodes/get-task.js",
             "todoist-task-get-all": "./nodes/get-all-tasks.js",
             "todoist-task-create": "./nodes/create-task.js",

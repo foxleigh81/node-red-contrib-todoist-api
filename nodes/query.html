@@ -6,7 +6,7 @@
         defaults: {
             name: {value:""},
             token: {
-                type:"add-token"
+                type:"add-todoist-api-token"
             },
         },
         inputs:1,
@@ -32,15 +32,13 @@
 </script>
 
 <script type="text/markdown" data-help-name="todoist-query-api">
-    ## Custom API query
+Send any query to the Todoist REST API. The query is sent as a JSON payload, which looks like this:
 
-    Send any query to the Todoist API. The query is sent as a JSON payload, which looks like this:
-    
-    ```json
-    {
-        "endpoint": "your endpoint",
-        "method": "your method",
-        "data": { the data you wish to send (optional)}
-    }
-    ```
+```json
+{
+  "endpoint": "your endpoint",
+  "method": "your method",
+  "data": { the data you wish to send (optional)}
+}
+```
 </script>
