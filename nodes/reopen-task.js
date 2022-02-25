@@ -1,6 +1,6 @@
 module.exports = function(RED) {
-    var todoistQuery = require('../../lib/todoist-query');
-    function TodoistTaskDelete(config) {
+    var todoistQuery = require('../lib/todoist-query');
+    function TodoistTaskReopen(config) {
         RED.nodes.createNode(this,config);
 
         var node = this;
@@ -8,11 +8,12 @@ module.exports = function(RED) {
         var token = RED.nodes.getNode(config.token).credentials.token;
 
         node.on('input', function(msg) {
-            var id = msg.payload.id;
+            var data = msg.payload;
             var options = {
                 token,
-                endpoint: `tasks/${id}`,
-                method: 'DELETE'
+                endpoint: `tasks/${data.id}/reopen`,
+                method: 'POST',
+                data
             };
             todoistQuery(options)
                 .then(function(response) {
@@ -29,5 +30,5 @@ module.exports = function(RED) {
                 })
         });
     }
-    RED.nodes.registerType("todoist-task-delete", TodoistTaskDelete);
+    RED.nodes.registerType("todoist-task-reopen", TodoistTaskReopen);
 }

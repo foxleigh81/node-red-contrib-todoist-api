@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    var todoistQuery = require('../../lib/todoist-query');
+    var todoistQuery = require('../lib/todoist-query');
     function TodoistQueryAPI(config) {
         RED.nodes.createNode(this,config);
 
