@@ -37,7 +37,8 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "eslint": "^8.10.0"
