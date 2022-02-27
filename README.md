@@ -13,7 +13,9 @@ You can install via the node-red palette manager or via npm:
 ```bash
 npm i --unsafe-perm node-red-contrib-todoist-api
 ```
+
 ## Usage
+
 ### Configuration
 
 To start using these nodes you will need to create a new configuration node, to do this, drag a node from the palette into the flow editor and double click it and add your Todoist API token to the 'select token' dropdown.
@@ -27,10 +29,56 @@ Each node interacts with the Todoist API and returns data in the form of a node-
 ### Example flow
 
 ```json
-[{"id":"cd167cf2edaf6512","type":"inject","z":"a42573365dced8a7","name":"'Create' Task Data","props":[{"p":"payload"},{"p":"topic","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"content\":\"Test Task\",\"project_id\":2184202398,\"priority\":1}","payloadType":"json","x":410,"y":440,"wires":[["57872b84db271bd5"]]},{"id":"57872b84db271bd5","type":"todoist-task-create","z":"a42573365dced8a7","name":"","token":"59a4505979e26f0f","x":610,"y":440,"wires":[["a33919ea4e211f6f"]]},{"id":"a33919ea4e211f6f","type":"debug","z":"a42573365dced8a7","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":970,"y":680,"wires":[]},{"id":"59a4505979e26f0f","type":"add-token","name":"Todoist"}]
+[
+  {
+    "id": "cd167cf2edaf6512",
+    "type": "inject",
+    "z": "a42573365dced8a7",
+    "name": "'Create' Task Data",
+    "props": [{ "p": "payload" }, { "p": "topic", "vt": "str" }],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "{\"content\":\"Test Task\",\"project_id\":2184202398,\"priority\":1}",
+    "payloadType": "json",
+    "x": 410,
+    "y": 440,
+    "wires": [["57872b84db271bd5"]]
+  },
+  {
+    "id": "57872b84db271bd5",
+    "type": "todoist-task-create",
+    "z": "a42573365dced8a7",
+    "name": "",
+    "token": "59a4505979e26f0f",
+    "x": 610,
+    "y": 440,
+    "wires": [["a33919ea4e211f6f"]]
+  },
+  {
+    "id": "a33919ea4e211f6f",
+    "type": "debug",
+    "z": "a42573365dced8a7",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 970,
+    "y": 680,
+    "wires": []
+  },
+  { "id": "59a4505979e26f0f", "type": "add-token", "name": "Todoist" }
+]
 ```
 
 The payload data in the inject node is same data as the Todoist REST API create task item. [https://developer.todoist.com/rest/v8/#create-a-new-task](https://developer.todoist.com/rest/v8/#create-a-new-task).
+
 ## Nodes available
 
 I created several nodes for common tasks such as:

@@ -1,0 +1,46 @@
+<script type="text/javascript">
+  RED.nodes.registerType("todoist-task-create", {
+    category: "Todoist",
+    icon: "icons/todoist.png",
+    color: "#db4c3f",
+    defaults: {
+      name: { value: "" },
+      token: {
+        type: "add-todoist-api-token"
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function () {
+      return this.name || "Create Task";
+    },
+    paletteLabel: "Create Task"
+  });
+</script>
+
+<script type="text/html" data-template-name="todoist-task-create">
+  <div class="form-row">
+    <label for="node-input-token"><i class="fa fa-key"></i> Select Token</label>
+    <input type="text" id="node-input-token" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+</script>
+
+<script type="text/markdown" data-help-name="todoist-task-create">
+  This node creates a task in your Todoist account.
+
+  It expects a payload of data in the form of a JSON object with data that matches the format in the [Todoist REST API documentation](https://developer.todoist.com/rest/v1/#tasks).:
+
+  e.g.
+
+  ```json
+  {
+    "content": "Test Task",
+    "project_id": 2203306141,
+    "priority": 1
+  }
+  ```
+</script>

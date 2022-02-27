@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  RED.nodes.registerType("add-todoist-api-token", {
+    category: "config",
+    color: "#db4c3f",
+    defaults: {
+      name: { value: "" }
+    },
+    credentials: {
+      token: { type: "password" }
+    },
+    label: function () {
+      return "Todoist API Token";
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="add-todoist-api-token">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-config-input-name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-token"><i class="fa fa-key"></i> API Token</label>
+    <input type="password" id="node-config-input-token" />
+  </div>
+</script>
+
+<script type="text/markdown" data-help-name="add-todoist-api-token">
+  Node will create a connection to your Todoist account.
+
+  Go and grab your API token from https://todoist.com/app/settings/integrations
+</script>
