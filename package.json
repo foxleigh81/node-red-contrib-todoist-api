@@ -1,36 +1,44 @@
 {
-    "name": "@foxleigh81/node-red-contrib-todoist-api",
-    "version": "0.0.3",
-    "description": "Todoist API interaction nodes for Node-RED",
-    "node-red": {
-        "nodes": {
-            "add-todoist-api-token": "./nodes/config.js",
-            "todoist-task-get": "./nodes/get-task.js",
-            "todoist-task-get-all": "./nodes/get-all-tasks.js",
-            "todoist-task-create": "./nodes/create-task.js",
-            "todoist-task-update": "./nodes/update-task.js",
-            "todoist-task-complete": "./nodes/complete-task.js",
-            "todoist-task-reopen": "./nodes/reopen-task.js",
-            "todoist-task-delete": "./nodes/delete-task.js",
-            "todoist-query-api": "./nodes/query.js"
-        }
-    },
-    "license": "MIT",
-    "homepage": "https://github.com/foxleigh81/node-red-contrib-todoist-api#readme",
-    "authors": {
-        "name": "Alex Foxleigh",
-        "email": "alex@alexfoxleigh.com",
-        "url": "https://alexfoxleigh.com/"
-    },
-    "keywords": [
-        "Todoist",
-        "node-red"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/foxleigh81/node-red-contrib-todoist-api.git"
-    },
-    "dependencies": {
-        "axios": "^0.25.0"
+  "name": "@foxleigh81/node-red-contrib-todoist-api",
+  "version": "0.0.3",
+  "description": "Todoist API interaction nodes for Node-RED",
+  "node-red": {
+    "nodes": {
+      "add-todoist-api-token": "./nodes/config.js",
+      "todoist-task-get": "./nodes/get-task.js",
+      "todoist-task-get-all": "./nodes/get-all-tasks.js",
+      "todoist-task-create": "./nodes/create-task.js",
+      "todoist-task-update": "./nodes/update-task.js",
+      "todoist-task-complete": "./nodes/complete-task.js",
+      "todoist-task-reopen": "./nodes/reopen-task.js",
+      "todoist-task-delete": "./nodes/delete-task.js",
+      "todoist-query-api": "./nodes/query.js"
     }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/foxleigh81/node-red-contrib-todoist-api#readme",
+  "authors": {
+    "name": "Alex Foxleigh",
+    "email": "alex@alexfoxleigh.com",
+    "url": "https://alexfoxleigh.com/"
+  },
+  "keywords": [
+    "Todoist",
+    "node-red"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foxleigh81/node-red-contrib-todoist-api.git"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "prettier": "^2.5.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "prettier": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0"
+  }
 }

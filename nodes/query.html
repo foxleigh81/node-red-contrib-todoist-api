@@ -1,44 +1,42 @@
 <script type="text/javascript">
-    RED.nodes.registerType('todoist-query-api',{
-        category: 'Todoist',
-        icon: "icons/todoist.png",
-        color: '#db4c3f', 
-        defaults: {
-            name: {value:""},
-            token: {
-                type:"add-todoist-api-token"
-            },
-        },
-        inputs:1,
-        outputs:1,
-        label: function () {
-            return this.name ||  "Query API";
-        },
-        paletteLabel: 'Custom query',
-    });
+  RED.nodes.registerType("todoist-query-api", {
+    category: "Todoist",
+    icon: "icons/todoist.png",
+    color: "#db4c3f",
+    defaults: {
+      name: { value: "" },
+      token: {
+        type: "add-todoist-api-token"
+      }
+    },
+    inputs: 1,
+    outputs: 1,
+    label: function () {
+      return this.name || "Query API";
+    },
+    paletteLabel: "Custom query"
+  });
 </script>
 
 <script type="text/html" data-template-name="todoist-query-api">
-    <div class="form-row">
-        <label for="node-input-token"
-          ><i class="fa fa-key" ></i> Select Token</label
-          >
-          <input type="text" id="node-input-token" />
-    </div>
-    <div class="form-row">
-        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
+  <div class="form-row">
+    <label for="node-input-token"><i class="fa fa-key"></i> Select Token</label>
+    <input type="text" id="node-input-token" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
 </script>
 
 <script type="text/markdown" data-help-name="todoist-query-api">
-Send any query to the Todoist REST API. The query is sent as a JSON payload, which looks like this:
+  Send any query to the Todoist REST API. The query is sent as a JSON payload, which looks like this:
 
-```json
-{
-  "endpoint": "your endpoint",
-  "method": "your method",
-  "data": { the data you wish to send (optional)}
-}
-```
+  ```json
+  {
+    "endpoint": "your endpoint",
+    "method": "your method",
+    "data": { the data you wish to send (optional)}
+  }
+  ```
 </script>
