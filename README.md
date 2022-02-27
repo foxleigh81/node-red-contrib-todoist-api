@@ -2,6 +2,8 @@
 
 ![npm](https://img.shields.io/npm/dm/@foxleigh81/node-red-contrib-todoist-api)
 
+![Todoist Node Red](https://repository-images.githubusercontent.com/458516480/01940d4d-b7eb-4683-9afb-ff57ee1a86c1)
+
 This is a node-red palette that allows you to interact with your [Todoist](https://todoist.com) account via the [Todoist REST API](https://developer.todoist.com/rest/v1/#overview)
 
 ## Install
