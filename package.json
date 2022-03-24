@@ -38,9 +38,14 @@
   "scripts": {
     "lint": "eslint .",
     "prettier": "prettier --write .",
+    "test": "mocha \"test/**/*_spec.js\"",
     "postinstall": "husky install"
   },
   "devDependencies": {
-    "eslint": "^8.10.0"
+    "eslint": "^8.10.0",
+    "mocha": "^9.2.1",
+    "node-red": "^2.2.2",
+    "node-red-node-test-helper": "^0.2.7",
+    "should": "^13.2.3"
   }
 }
