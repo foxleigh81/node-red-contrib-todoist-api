@@ -1,4 +1,4 @@
-# node-red-contrib-todoist-api
+# @foxleigh81/node-red-contrib-todoist-api
 
 ![npm](https://img.shields.io/npm/dm/@foxleigh81/node-red-contrib-todoist-api)
 
@@ -11,7 +11,7 @@ This is a node-red palette that allows you to interact with your [Todoist](https
 You can install via the node-red palette manager or via npm:
 
 ```bash
-npm i --unsafe-perm node-red-contrib-todoist-api
+npm i --unsafe-perm @foxleigh81/node-red-contrib-todoist-api
 ```
 
 ## Usage
