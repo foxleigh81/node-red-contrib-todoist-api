@@ -1,4 +1,4 @@
-# @foxleigh81/node-red-contrib-todoist-api
+# @jak119/node-red-contrib-todoist-api
 
 <details>
   <summary>Original Markdown</summary>
@@ -109,4 +109,5 @@ MIT License
 I made this with love and of course it is free for you to use and modify however you see fit, however if you would like to buy me a coffee to say thanks, I certainly won't complain :)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I21FRCN)
+
 </details>
