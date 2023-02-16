@@ -1,5 +1,9 @@
 # @foxleigh81/node-red-contrib-todoist-api
 
+<details>
+  <summary>Original Markdown</summary>
+# @foxleigh81/node-red-contrib-todoist-api
+
 ![npm](https://img.shields.io/npm/dm/@foxleigh81/node-red-contrib-todoist-api)
 
 ![Todoist Node Red](https://repository-images.githubusercontent.com/458516480/01940d4d-b7eb-4683-9afb-ff57ee1a86c1)
@@ -105,3 +109,4 @@ MIT License
 I made this with love and of course it is free for you to use and modify however you see fit, however if you would like to buy me a coffee to say thanks, I certainly won't complain :)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I21FRCN)
+</details>

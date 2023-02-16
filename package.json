@@ -1,6 +1,6 @@
 {
-  "name": "@foxleigh81/node-red-contrib-todoist-api",
-  "version": "0.0.4",
+  "name": "@jak119/node-red-contrib-todoist-api",
+  "version": "0.0.1",
   "description": "Todoist API interaction nodes for Node-RED",
   "node-red": {
     "nodes": {
@@ -18,9 +18,9 @@
   "license": "MIT",
   "homepage": "https://github.com/foxleigh81/node-red-contrib-todoist-api#readme",
   "authors": {
-    "name": "Alex Foxleigh",
-    "email": "alex@alexfoxleigh.com",
-    "url": "https://alexfoxleigh.com/"
+    "name": "Jamison Kissh",
+    "email": "jak@jamisonkissh.com",
+    "url": "https://github.com/jak119/node-red-contrib-todoist-api/"
   },
   "keywords": [
     "Todoist",
@@ -28,7 +28,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/foxleigh81/node-red-contrib-todoist-api.git"
+    "url": "https://github.com/jak119/node-red-contrib-todoist-api.git"
   },
   "dependencies": {
     "axios": "^0.25.0",
