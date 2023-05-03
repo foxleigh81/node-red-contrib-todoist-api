@@ -12,6 +12,7 @@
       "todoist-task-complete": "./nodes/complete-task.js",
       "todoist-task-reopen": "./nodes/reopen-task.js",
       "todoist-task-delete": "./nodes/delete-task.js",
+      "todoist-project-get-all": "./nodes/get-all-projects.js",
       "todoist-query-api": "./nodes/query.js"
     }
   },
