@@ -1,20 +1,20 @@
 <script type="text/javascript">
-  RED.nodes.registerType('todoist-project-get-all', {
-    category: 'Todoist',
-    icon: 'icons/todoist.png',
-    color: '#db4c3f',
+  RED.nodes.registerType("todoist-project-get-all", {
+    category: "Todoist",
+    icon: "icons/todoist.png",
+    color: "#db4c3f",
     defaults: {
-      name: { value: '' },
+      name: { value: "" },
       token: {
-        type: 'add-todoist-api-token'
+        type: "add-todoist-api-token"
       }
     },
     inputs: 1,
     outputs: 1,
     label: function () {
-      return this.name || 'Get all projects';
+      return this.name || "Get all projects";
     },
-    paletteLabel: 'Get all projects'
+    paletteLabel: "Get all projects"
   });
 </script>
 
