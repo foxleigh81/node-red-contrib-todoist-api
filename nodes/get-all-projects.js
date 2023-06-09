@@ -1,33 +1,33 @@
 module.exports = function (RED) {
-  var todoistQuery = require("../lib/todoist-query");
+  const todoistQuery = require('../lib/todoist-query');
   function TodoistProjectGetAll(config) {
     RED.nodes.createNode(this, config);
 
-    var node = this;
+    const node = this;
 
-    var token = RED.nodes.getNode(config.token).credentials.token;
+    const token = RED.nodes.getNode(config.token).credentials.token;
 
-    node.on("input", function (msg) {
-      var endpoint = "projects";
-      var options = {
+    node.on('input', function (msg) {
+      const endpoint = 'projects';
+      const options = {
         token,
         endpoint,
-        method: "GET"
+        method: 'GET'
       };
       todoistQuery(options)
         .then(function (response) {
           msg.payload = response;
           msg.response = response;
           node.send(msg);
-          node.status({ fill: "green", shape: "dot", text: "Success" });
+          node.status({ fill: 'green', shape: 'dot', text: 'Success' });
         })
         .catch((error) => {
           msg.payload = error;
           msg.response = error;
           node.send(msg);
-          node.status({ fill: "red", shape: "dot", text: "API Error" });
+          node.status({ fill: 'red', shape: 'dot', text: 'API Error' });
         });
     });
   }
-  RED.nodes.registerType("todoist-project-get-all", TodoistProjectGetAll);
+  RED.nodes.registerType('todoist-project-get-all', TodoistProjectGetAll);
 };

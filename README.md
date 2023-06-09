@@ -86,6 +86,7 @@ I created several nodes for common tasks such as:
 - Create an individual task
 - Get an individual task
 - List all tasks (either in a project or on the entire account)
+- List all projects
 - Update an individual task
 - Complete/uncomplete an individual task
 - Delete an individual task
