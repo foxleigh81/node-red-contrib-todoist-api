@@ -1,20 +1,20 @@
 <script type="text/javascript">
-  RED.nodes.registerType("todoist-query-api", {
-    category: "Todoist",
-    icon: "icons/todoist.png",
-    color: "#db4c3f",
+  RED.nodes.registerType('todoist-query-api', {
+    category: 'Todoist',
+    icon: 'icons/todoist.png',
+    color: '#db4c3f',
     defaults: {
-      name: { value: "" },
+      name: { value: '' },
       token: {
-        type: "add-todoist-api-token"
+        type: 'add-todoist-api-token'
       }
     },
     inputs: 1,
     outputs: 1,
     label: function () {
-      return this.name || "Query API";
+      return this.name || 'Query API';
     },
-    paletteLabel: "Custom query"
+    paletteLabel: 'Custom query'
   });
 </script>
 
@@ -34,9 +34,21 @@
 
   ```json
   {
-    "endpoint": "your endpoint",
-    "method": "your method",
+    "endpoint": "your endpoint (e.g. "projects")",
+    "method": "your method (e.g. "GET", "POST", "PUT", "DELETE")",
     "data": { the data you wish to send (optional)}
+  }
+  ```
+
+  Here's an example of a query that creates a new project:
+
+  ```json
+  {
+    "endpoint": "projects",
+    "method": "POST",
+    "data": {
+      "name": "My new project"
+    }
   }
   ```
 </script>
