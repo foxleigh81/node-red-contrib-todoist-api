@@ -1,33 +1,21 @@
 module.exports = function (RED) {
-  var todoistQuery = require("../lib/todoist-query");
+  const runQuery = require("../lib/run-query");
   function TodoistTaskUpdate(config) {
     RED.nodes.createNode(this, config);
 
-    var node = this;
+    const node = this;
 
-    var token = RED.nodes.getNode(config.token).credentials.token;
+    const token = RED.nodes.getNode(config.token).credentials.token;
 
     node.on("input", function (msg) {
-      var data = msg.payload;
-      var options = {
+      const data = msg.payload;
+      const options = {
         token,
         endpoint: `tasks/${data.id}`,
         method: "POST",
         data
       };
-      todoistQuery(options)
-        .then(function (response) {
-          msg.payload = response;
-          msg.response = response;
-          node.send(msg);
-          node.status({ fill: "green", shape: "dot", text: "Success" });
-        })
-        .catch((error) => {
-          msg.payload = error;
-          msg.response = error;
-          node.send(msg);
-          node.status({ fill: "red", shape: "dot", text: "API Error" });
-        });
+      return runQuery(node, options, msg);
     });
   }
   RED.nodes.registerType("todoist-task-update", TodoistTaskUpdate);

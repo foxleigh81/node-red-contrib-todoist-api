@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  RED.nodes.registerType("todoist-task-get-all", {
+  RED.nodes.registerType("todoist-project-get-all", {
     category: "Todoist",
     icon: "icons/todoist.png",
     color: "#db4c3f",
@@ -12,13 +12,13 @@
     inputs: 1,
     outputs: 1,
     label: function () {
-      return this.name || "Get all tasks";
+      return this.name || "Get all projects";
     },
-    paletteLabel: "Get all tasks"
+    paletteLabel: "Get all projects"
   });
 </script>
 
-<script type="text/html" data-template-name="todoist-task-get-all">
+<script type="text/html" data-template-name="todoist-project-get-all">
   <div class="form-row">
     <label for="node-input-token"><i class="fa fa-key"></i> Select Token</label>
     <input type="text" id="node-input-token" />
@@ -29,16 +29,6 @@
   </div>
 </script>
 
-<script type="text/markdown" data-help-name="todoist-task-get-all">
-  This node gets all tasks in your Todoist account, no payload is required to get all tasks on account.
-
-  To retrieve all tasks for a specific project, include a `project_id` property on the payload.
-
-  e.g.
-
-  ```json
-  {
-    "project_id": "123456789"
-  }
-  ```
+<script type="text/markdown" data-help-name="todoist-project-get-all">
+  This node gets all projects in your Todoist account, no payload is required to get all tasks on account.
 </script>

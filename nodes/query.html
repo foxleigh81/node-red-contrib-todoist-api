@@ -34,9 +34,21 @@
 
   ```json
   {
-    "endpoint": "your endpoint",
-    "method": "your method",
+    "endpoint": "your endpoint (e.g. "projects")",
+    "method": "your method (e.g. "GET", "POST", "PUT", "DELETE")",
     "data": { the data you wish to send (optional)}
+  }
+  ```
+
+  Here's an example of a query that creates a new project:
+
+  ```json
+  {
+    "endpoint": "projects",
+    "method": "POST",
+    "data": {
+      "name": "My new project"
+    }
   }
   ```
 </script>

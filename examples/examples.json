@@ -1,13 +1,5 @@
 [
   {
-    "id": "a42573365dced8a7",
-    "type": "tab",
-    "label": "Todoist API Example Flows",
-    "disabled": false,
-    "info": "A set of example flows for the Todoist API",
-    "env": []
-  },
-  {
     "id": "cd167cf2edaf6512",
     "type": "inject",
     "z": "a42573365dced8a7",
@@ -26,10 +18,10 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}",
+    "payload": "{\"content\":\"Test Task\",\"project_id\":2184202398,\"priority\":1}",
     "payloadType": "json",
-    "x": 410,
-    "y": 440,
+    "x": 790,
+    "y": 260,
     "wires": [["57872b84db271bd5"]]
   },
   {
@@ -41,11 +33,12 @@
     "tosidebar": true,
     "console": false,
     "tostatus": false,
-    "complete": "false",
+    "complete": "true",
+    "targetType": "full",
     "statusVal": "",
     "statusType": "auto",
-    "x": 970,
-    "y": 680,
+    "x": 1330,
+    "y": 500,
     "wires": []
   },
   {
@@ -53,9 +46,9 @@
     "type": "todoist-task-create",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 610,
-    "y": 440,
+    "token": "356640820f7529fb",
+    "x": 990,
+    "y": 260,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -79,8 +72,8 @@
     "topic": "",
     "payload": "{\"id\": 2995104339}",
     "payloadType": "json",
-    "x": 430,
-    "y": 800,
+    "x": 810,
+    "y": 700,
     "wires": [["55c2728a694fba50"]]
   },
   {
@@ -88,9 +81,9 @@
     "type": "todoist-task-delete",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 610,
-    "y": 800,
+    "token": "356640820f7529fb",
+    "x": 990,
+    "y": 700,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -98,9 +91,9 @@
     "type": "todoist-task-get",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 610,
-    "y": 600,
+    "token": "356640820f7529fb",
+    "x": 990,
+    "y": 420,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -122,10 +115,10 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"id\": 2995104339}",
+    "payload": "{\"id\": 6928692827}",
     "payloadType": "json",
-    "x": 420,
-    "y": 600,
+    "x": 800,
+    "y": 420,
     "wires": [["6176e44bfb398636"]]
   },
   {
@@ -133,9 +126,9 @@
     "type": "todoist-task-get-all",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 610,
-    "y": 700,
+    "token": "356640820f7529fb",
+    "x": 990,
+    "y": 520,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -159,8 +152,8 @@
     "topic": "",
     "payload": "",
     "payloadType": "date",
-    "x": 390,
-    "y": 680,
+    "x": 770,
+    "y": 500,
     "wires": [["2e76265919aa72c3"]]
   },
   {
@@ -184,8 +177,8 @@
     "topic": "",
     "payload": "{\"project_id\": 2203306141}",
     "payloadType": "json",
-    "x": 380,
-    "y": 720,
+    "x": 760,
+    "y": 540,
     "wires": [["2e76265919aa72c3"]]
   },
   {
@@ -193,9 +186,9 @@
     "type": "todoist-task-update",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 620,
-    "y": 520,
+    "token": "356640820f7529fb",
+    "x": 1000,
+    "y": 340,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -217,10 +210,10 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"id\": 2995104339}",
+    "payload": "{\"id\": 6952231601}",
     "payloadType": "json",
-    "x": 400,
-    "y": 860,
+    "x": 780,
+    "y": 760,
     "wires": [["682a305ee30dc176"]]
   },
   {
@@ -242,10 +235,10 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"id\": 2995104339}",
+    "payload": "{\"id\": 6952231601}",
     "payloadType": "json",
-    "x": 410,
-    "y": 920,
+    "x": 790,
+    "y": 820,
     "wires": [["e0d0f19b60d02989"]]
   },
   {
@@ -253,9 +246,9 @@
     "type": "todoist-task-complete",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 620,
-    "y": 860,
+    "token": "356640820f7529fb",
+    "x": 1000,
+    "y": 760,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -263,9 +256,9 @@
     "type": "todoist-task-reopen",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 620,
-    "y": 920,
+    "token": "356640820f7529fb",
+    "x": 1000,
+    "y": 820,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -273,9 +266,9 @@
     "type": "todoist-query-api",
     "z": "a42573365dced8a7",
     "name": "",
-    "token": "59a4505979e26f0f",
-    "x": 600,
-    "y": 1000,
+    "token": "356640820f7529fb",
+    "x": 980,
+    "y": 900,
     "wires": [["a33919ea4e211f6f"]]
   },
   {
@@ -297,10 +290,10 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"endpoint\":\"tasks\",\"method\":\"post\",\"data\":{\"content\":\"Test Task\",\"project_id\":2203306141,\"priority\":1}}",
+    "payload": "{\"endpoint\":\"projects\",\"method\":\"POST\",\"data\":{\"name\":\"My new project\"}}",
     "payloadType": "json",
-    "x": 420,
-    "y": 1000,
+    "x": 800,
+    "y": 900,
     "wires": [["78eb9328879e60a0"]]
   },
   {
@@ -322,15 +315,50 @@
     "once": false,
     "onceDelay": 0.1,
     "topic": "",
-    "payload": "{\"id\":2995104339,\"content\":\"Test Task (updated)\",\"project_id\":2203306141,\"priority\":1,\"assignee\":2671142}",
+    "payload": "{\"id\":5591401849,\"content\":\"Test Task (updated)\",\"project_id\":2184202398,\"priority\":1,\"assignee\":2671142}",
     "payloadType": "json",
-    "x": 410,
-    "y": 520,
+    "x": 790,
+    "y": 340,
     "wires": [["000b832a2480a983"]]
   },
   {
-    "id": "59a4505979e26f0f",
-    "type": "add-token",
-    "name": "Todoist"
+    "id": "129695bc57f500ac",
+    "type": "todoist-project-get-all",
+    "z": "a42573365dced8a7",
+    "name": "",
+    "token": "356640820f7529fb",
+    "x": 1000,
+    "y": 620,
+    "wires": [["a33919ea4e211f6f"]]
+  },
+  {
+    "id": "bbf905274a28d558",
+    "type": "inject",
+    "z": "a42573365dced8a7",
+    "name": "Get all projects on account",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 770,
+    "y": 620,
+    "wires": [["129695bc57f500ac"]]
+  },
+  {
+    "id": "356640820f7529fb",
+    "type": "add-todoist-api-token",
+    "name": "todoist"
   }
 ]
