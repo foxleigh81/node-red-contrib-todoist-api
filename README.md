@@ -20,7 +20,7 @@ npm i --unsafe-perm @foxleigh81/node-red-contrib-todoist-api
 
 To start using these nodes you will need to create a new configuration node, to do this, drag a node from the palette into the flow editor and double click it and add your Todoist API token to the 'select token' dropdown.
 
-To get your todoist personal API token, follow the following list: https://todoist.com/app/settings/integrations
+To get your todoist personal API token, go to https://todoist.com/app/settings/integrations and click the 'devlopers' tab.
 
 ### Adding data
 
